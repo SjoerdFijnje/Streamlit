@@ -5,7 +5,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.text_input("Your name", key="name")
+if st.checkbox('Show dataframe'):
+    chart_data = pd.DataFrame(
+       np.random.randn(20, 3),
+       columns=['a', 'b', 'c'])
 
-# You can access the value at any point with:
-st.session_state.name
+    chart_data
