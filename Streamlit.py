@@ -24,8 +24,11 @@ import numpy as np
 # In[3]:
 
 
-dataframe = np.random.randn(10, 20)
-st.dataframe(dataframe)
+chart_data = pd.DataFrame(
+     np.random.randn(20, 3),
+     columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
 
 
 # In[ ]:
